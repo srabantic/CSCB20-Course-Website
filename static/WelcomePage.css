@@ -1,0 +1,61 @@
+* {
+    font-family: Century Gothic;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-image: url("b20pic.jpg");
+
+}
+
+h1{
+    margin-top: 100px;
+	text-align: center;
+	margin-left: 100px;
+}
+h2{
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 130px;
+}
+
+nav{
+	list-style-type: none;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+
+nav li{
+    font-size: larger;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top:50%
+}
+
+input{
+    font-size: larger;
+    background-color:white
+}
+
+nav li.active a{
+  background-color: green;
+  color: white;
+}
+
+nav li a:hover{
+    background-color: green;
+    color: white;
+}
+p{
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 5px;
+    text-align:center;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Century Gothic', 'Futura', san-serif;
+}

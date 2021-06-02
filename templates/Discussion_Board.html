@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='Discussion_Board.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<h1>CSCB20-Discussion Board</h1>
+	</header>
+	<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+
+	</nav>
+	<div class="content">
+		<h2><u> Piazza</u> </h2>
+		<article> The following link leads to a discussion forum for this class.
+		This is a place where students and instructors can interact. Make sure that
+		if you have questions try posting it here before you e-mail me.
+		<strong><p> Discussion board:</strong><a href= "https://piazza.com/">Piazza</a></p>
+		</article>
+		<h2><u>Anonymous Feedback</u> </h2>
+		<article>
+		<div class = "feedback_feilds">
+		<form action="/anon-feedback" method="POST">
+			<input class = "input-box" type="text" name = "i_firstName" placeholder="Instructor's First name">
+			<input class = "input-box" type="text" name = "i_lastName" placeholder="Instructor's Last name">
+			<input class = "input-box" type="text" name = "instructors_teaching_feedback" placeholder="What do you like about the instrutor's teaching?">
+			<input class = "input-box" type="text" name = "instructors_recommendation_feedback" placeholder="What do you recommend the instrutor to do to improve their teaching?">
+			<input class = "input-box" type="text" name = "labs_experience_feedback" placeholder="What do you like about the labs?">
+            <input class = "input-box" type="text" name = "labs_improvement_recommendation" placeholder="What do you recommend the lab instructors to do to improve their teaching?">
+			 <input class = "input-box" type="text" name = "furthur_feedback" placeholder="Anything else you may want to add">
+			<br>
+			<input class = "submit-button" type="submit" name="new-submit">
+		</form>
+	</div>
+	</article>
+	</div>
+
+
+	<div class="footer">
+		<p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+		<p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+	</div>
+</body>
+</html>

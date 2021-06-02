@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='Send_Remark_Requests.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<h1>CSCB20-Remark Request</h1>
+	</header>
+	<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+
+	</nav>
+	<div class="content">
+		<h2><u> Remark Request</u> </h2>
+        <form action="/send-remark-reqs" method="POST">
+		<article><textarea class="form-element" name = "requests" placeholder="Explain the reason that you would like a remark" row="15" cols="20"></textarea>
+	    <h3>Select the term work to be Remarked</h3>
+	    	<div>
+	    		<select class = "input box" id = "options" name = "options">
+	    		 <option value="First Choice">Assignment1</option>
+	    		 <option value="Second Choice">Assignment2</option>
+	    		 <option value="Third Choice">Assignment3</option>
+	    		 <option value="Fourth Choice">Assignment4</option>
+	    		 <option value="Fifth Choice">Lab1</option>
+	    		 <option value="Sixth Choice">Lab2</option>
+	    		 <option value="Seventh Choice">Lab3</option>
+	    		 <option value="Eighth Choice">Lab4</option>
+	    		 <option value="Ninth Choice">Lab5</option>
+	    		 <option value="Tenth Choice">Lab6</option>
+	    		 <option value="Elventh Choice">Lab7</option>
+	    		 <option value="Twelfth Choice">Lab8</option>
+	    		 <option value="Thirteenth Choice">Lab9</option>
+	    		 <option value="Fourtenth Choice">Lab10</option>
+	    		 <option value="Fifteenth Choice">TT1</option>
+	    		 <option value="Sixteenth Choice">TT2</option>
+	    		 <option value="Seventeenth Choice">Final Exam</option>
+	    		</select>
+	    	</div>
+	    	<h3>Enter your username</h3>
+	    	<input type="text" id="fname" name="fname">
+
+		<input type="submit" value="Submit">
+	    </article>
+        </form>
+	</div>
+	<div class="footer">
+		<p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+		<p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+	</div>
+</body>
+</html>

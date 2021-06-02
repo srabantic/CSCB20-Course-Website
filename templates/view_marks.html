@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='instructors_anon_feedback.css') }}">
+
+<style>
+    label{
+    margin-left: 260px;
+    font-size: larger;
+    font-weight: bold;
+}
+</style>
+  <title></title>
+</head>
+<body>
+<h1><u>Course marks for {{ student_ID }}</u></h1>
+<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+         {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs""><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+<label><u> Assignment Marks </u></label>
+<div class="content">
+    <article>
+        <div class="MyTable">
+            <div class="MyTable-Tr title">
+                <div class="MyTable-Td">Student Username</div>
+                <div class="MyTable-Td">Assignment 1</div>
+                <div class="MyTable-Td">Assignment 2</div>
+                <div class="MyTable-Td">Assignment 3</div>
+		</div>
+      {% for item in assign_mark %}
+          <div class="MyTable-Tr">
+              <div class="MyTable-Td">{{ item['s_id'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['a1_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['a2_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['a3_mark'] }}</div>
+		</div>
+      {% endfor %}
+        </div>
+    </article>
+</div>
+
+<label><u> Lab Marks </u></label>
+<div class="content">
+<article>
+        <div class="MyTable">
+            <div class="MyTable-Tr title">
+                <div class="MyTable-Td">Student Username</div>
+                <div class="MyTable-Td">Lab 1</div>
+                <div class="MyTable-Td">Lab 2</div>
+                <div class="MyTable-Td">Lab 3</div>
+                <div class="MyTable-Td">Lab 4</div>
+                <div class="MyTable-Td">Lab 5</div>
+                <div class="MyTable-Td">Lab 6</div>
+                <div class="MyTable-Td">Lab 7</div>
+                <div class="MyTable-Td">Lab 8</div>
+                <div class="MyTable-Td">Lab 9</div>
+                <div class="MyTable-Td">Lab 10</div>
+
+		</div>
+      {% for item in lab_mark %}
+          <div class="MyTable-Tr">
+              <div class="MyTable-Td">{{ item['s_id'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab1_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab2_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab3_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab4_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab5_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab6_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab7_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab8_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab9_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['Lab10_mark'] }}</div>
+          </div>
+      {% endfor %}
+        </div>
+    </article>
+</div>
+
+<label><u>Term Test Mark</u></label>
+<div class="content">
+<article>
+        <div class="MyTable">
+            <div class="MyTable-Tr title">
+                <div class="MyTable-Td">Student Username</div>
+                <div class="MyTable-Td">Term Test 1</div>
+                <div class="MyTable-Td">Term Test 2</div>
+		</div>
+      {% for item in termtest_mark %}
+          <div class="MyTable-Tr">
+              <div class="MyTable-Td">{{ item['s_id'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['tt1_mark'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['tt2_mark'] }}</div>
+          </div>
+      {% endfor %}
+        </div>
+    </article>
+</div>
+
+<label><u> Final Exam Marks </u></label>
+<div class="content">
+<article>
+    <div class="MyTable">
+            <div class="MyTable-Tr title">
+                <div class="MyTable-Td">Student Username</div>
+                <div class="MyTable-Td">Final Exam</div>
+
+		</div>
+      {% for item in final_mark %}
+          <div class="MyTable-Tr">
+              <div class="MyTable-Td">{{ item['s_id'] }}</div>
+              <div class="MyTable-Td"><td>{{ item['marks'] }}</div>
+
+          </div>
+      {% endfor %}
+        </div>
+    </article>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='Tests.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<h1>CSCB20-Tests</h1>
+	</header>
+	<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+       {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs""><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+	<div class="content">
+		<h2><u>Midterm</u></h2>
+		<article>There will be one midterm. The midterm will be 1hour and 50minutes in length. 
+		You are assigned classrooms based on the first letter of your last name.
+		<img src="room_allocation.png" alt="midterm rooms" width="700" height="200" align="left">
+		<p><u>Preparing for the midterm</u></p>
+		 <ul>
+		 	<li>Understand every concept in Assignment 1</li>
+		 	<li>The midterm will cover everything on databases that we did from the start until week 6 lecture</li>
+		 	<li>Read through all tutorial material and given workheets</li>
+		 	<li><b>Once you have done everything mentioned above you may practise using a previous midterm:<a href= "testA.pdf">Term Test</a></b></li>
+		 </ul> 
+	    </article>
+	</div>
+	<div class="footer">
+		<p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+		<p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+	</div>
+</body>
+</html>

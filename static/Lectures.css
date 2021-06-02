@@ -1,0 +1,104 @@
+* {
+    font-family: Century Gothic;
+    margin: 0;
+    padding:0;
+}
+
+body {
+      background-color: white;
+      margin: 0;
+      padding:0;
+      background-image: url("img_back.png");
+      background-size: cover;
+      position: absolute;
+}
+
+header{
+	margin-bottom: 10px;
+}
+
+h1{
+	text-align: center;
+	margin-left: 200px;
+}
+
+nav{
+	list-style-type: none;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+
+nav li{
+    font-size: larger;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top:50%
+}
+
+input{
+    font-size: larger;
+    background-color:white
+}
+
+nav li.active a{
+  background-color: green;
+  color: white;
+}
+
+nav li a:hover{
+    background-color: green;
+    color: white;
+}
+
+.content{
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 35px;
+	margin-right: 5px;
+}
+
+.content h2{
+	margin-bottom: 10px;
+	text-align: left;
+	margin-left: 100px;
+}
+
+.content article{
+	width: 600px;
+	text-align: left; 
+	margin-left: 100px;
+	margin-bottom: 30px;
+}
+
+.content article div.MyTable{
+	display: table;
+}
+
+.content article div.MyTable .MyTable-Tr{
+	display: table-row;
+}
+
+.content article div.MyTable .MyTable-Tr .MyTable-Td{
+	display: table-cell;
+	padding: 35px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.content article div.MyTable .title{
+	font-weight: bold;
+
+}
+
+.footer {
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+   margin-left: 200px;
+}

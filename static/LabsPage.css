@@ -1,0 +1,137 @@
+@media all and (min-width: 800px){
+* {
+    font-family:'Century Gothic','Futura',san-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+      background-color: white;
+      margin: 0;
+      padding:0;
+      background-image: url("b20pic.jpg");
+      position: fixed;
+      background-size: cover;
+}
+.header{
+	text-align: center;
+	
+}
+
+h1{
+	text-align: center;
+	margin-left: 200px;
+}
+
+nav{
+	list-style-type: none;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+
+nav li{
+    font-size: larger;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top:50%
+}
+
+input{
+    font-size: larger;
+    background-color:white
+}
+
+nav li.active a{
+  background-color: green;
+  color: white;
+}
+
+nav li a:hover{
+    background-color: green;
+    color: white;
+}
+.content{
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 35px;
+	margin-right: 5px;
+}
+
+.content h2{
+	margin-bottom: 10px;
+	text-align: left;
+	margin-left: 100px;
+}
+
+.content article{
+	width: 600px;
+	text-align: left; 
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+}
+.Labs{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 60%;
+
+}
+.Heading{
+	display: table-row;
+	font-weight: bold;
+	text-align: center;
+	font-family:'Century Gothic','Futura',san-serif;
+    font-style: italic;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+.Rows{
+	display: table-row;
+	text-align: center;
+	left: 20px;
+	font-family:'Century Gothic','Futura',san-serif;
+    font-style: italic;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+.CellNames{
+	display: table-cell;
+	border:solid;
+	text-align: center;
+	vertical-align: middle;
+}
+@media all and (min-width: 800px){
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href= "{{ url_for('static', filename='view_mark_page.css') }}">
+  <title></title>
+</head>
+<body>
+<h1>CSCB20 Mark Distribution Page</h1>
+
+<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+
+	</nav>
+
+<div class="content">
+    <article>
+        <div class="MyTable">
+            <div class="MyTable-Tr title">
+                <div class="MyTable-Td">First Name</div>
+                <div class="MyTable-Td">Last Name</div>
+                <div class="MyTable-Td">Student Username</div>
+
+		</div>
+            {% for item in student %}
+                <div class="MyTable-Tr">
+                    <div class="MyTable-Td">{{ item['s_firstName'] }}</div>
+                    <div class="MyTable-Td"><td>{{ item['s_lastName'] }}</div>
+                    <div class="MyTable-Td"><td>{{ item['s_id'] }}</div>
+
+		</div>
+      {% endfor %}
+        </div>
+    </article>
+</div>
+<label>Search for a student by the student ID to view their course mark:</label>
+<form action="/view-student-mark">
+    <input class="input-box" type="text" name="s_id" placeholder="Enter a student ID">
+    <br>
+    <input type="submit" name="employee-submit">
+</form>
+</body>
+</html>

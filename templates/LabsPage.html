@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> </title>
+	 <link rel="stylesheet" href="{{ url_for('static', filename='LabsPage.css') }}">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class = "header">
+		<h1 ><b>  CSCB20-Labs</b></h1>
+	</div>
+	<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+       {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+
+    <div class="content">
+        <h2><u> Tutorial Sections</u> </h2>
+        <article> Please go to the tutorial that you have signed up for on Acorn.
+        </article>
+        <h2><u>Tutorial Excercises</u> </h2>
+        <article> This section contains the tutorial Excercises.Tutorials are held every week. The first tutorial week is week 2. Please make use of this valuable resource!
+        </article>
+    </div>
+<div class="Labs">
+	<div class = "Heading">
+		<div class = "CellNames">
+			<p> Week </p>
+		</div>
+		<div class = "CellNames">
+			<p> Lab </p>
+		</div>
+		<div class = "CellNames">
+			<p> Solution </p>
+		</div>
+	</div>
+	<div class="Rows">
+        <div class="CellNames">
+            <p>2</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t1/">Python, Command line</a></p>
+        </div>
+        <div class="CellNames">
+            <p>None</p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>3</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t2/relational.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+             <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t3/query_solns.html">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>4</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t3/index.html">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t3/query_solns.html">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>5</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/handout.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/tut4_soln.pdf">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>6</p>
+        </div>
+        <div class="CellNames">
+             <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/handout.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/tut4_soln.pdf">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>7</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/handout.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+           <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/tut4_soln.pdf">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>8</p>
+        </div>
+        <div class="CellNames">
+           <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/handout.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/tut4_soln.pdf">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>9</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/handout.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+           <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/tut4_soln.pdf">Solution</a></p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>10</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/handout.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="https://www.utsc.utoronto.ca/~bretscher/b20/tutorials/t4/tut4_soln.pdf">Solution</a></p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+        <p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+        <p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+    </div>
+</body>
+</html>

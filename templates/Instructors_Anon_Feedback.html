@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='instructors_anon_feedback.css') }}">
+  <title></title>
+</head>
+<body>
+<h1>CSCB20 Anonymous Feedback Page</h1>
+<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+	</nav>
+<div class="content">
+    <article>
+        <div class="MyTable">
+            <div class="MyTable-Tr title">
+                <div class="MyTable-Td">Instrcutor's Username</div>
+                <div class="MyTable-Td">Feedback on lectures</div>
+                <div class="MyTable-Td">Feedback on lecture improvement</div>
+                <div class="MyTable-Td">Feedback on tutorials</div>
+                <div class="MyTable-Td">Feedback on tutorial improvement</div>
+                <div class="MyTable-Td">Furthur feedback from the student</div>
+		</div>
+      {% for item in anon_feedback %}
+          <div class="MyTable-Tr">
+              <div class="MyTable-Td">{{ item['i_id'] }}</div>
+              <div class="MyTable-Td">{{ item['instructors_teaching_feedback'] }}</div>
+              <div class="MyTable-Td">{{ item['instructors_recommendation_feedback'] }}</div>
+              <div class="MyTable-Td">{{ item['labs_experience_feedback'] }}</div>
+              <div class="MyTable-Td">{{ item['labs_improvement_recommendation'] }}</div>
+              <div class="MyTable-Td">{{ item['furthur_feedback'] }}</div>
+		</div>
+
+      {% endfor %}
+        </div>
+    </article>
+</div>
+</body>
+</html>

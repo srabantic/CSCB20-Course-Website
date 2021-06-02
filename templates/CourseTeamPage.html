@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> </title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='CourseTeamPage.css') }}">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <div class = "header">
+        <h1 ><b>  CSCB20-Course Team</b></h1>
+    </div>
+    <nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+        {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+    </div>
+	<div class="content">
+        <h2><u> Tutorial Sections</u> </h2>
+        <article> Below is the list of all the course team members of CSCB20 for Winter 2020.
+            It contains all the information and office hours(TA's and instrcutor's).
+            Please note that there will be more office hours added throughout the semester
+            Refer to the calender page for more updates on office hours.
+        </article>
+        <h2><u> CSCB20 Course Team for Winter 2020 </u> </h2>
+
+   
+
+
+    </div>
+    
+	<div class="CourseTeam">
+
+	<div class = "Heading">
+
+		<div class = "CellNames">
+			<p> Name </p>
+		</div>
+		<div class = "CellNames">
+			<p> Tutorial Day and Time</p>
+		</div>
+		<div class = "CellNames">
+			<p> Tutorial # </p>
+		</div>
+		<div class = "CellNames">
+			<p>  Office Hours</p>
+		</div>
+		<div class = "CellNames">
+			<p> Email </p>
+		</div>
+	</div>
+	<div class="Rows">
+        <div class="CellNames">
+            <p>Anna Bretscher(Instructor)</p>
+        </div>
+        <div class="CellNames">
+            <p>N/A</a></p>
+        </div>
+        <div class="CellNames">
+            <p>N/A</p>
+        </div>
+        <div class="CellNames">
+            <p>Wednesday: 11.00 - 13.00</p>
+        </div>
+        <div class="CellNames">
+            <p>bretscher@utsc.utoronto.ca</p>
+        </div>
+    </div>
+	<div class="Rows">
+        <div class="CellNames">
+            <p>Vidya Ananda(TA)</p>
+        </div>
+        <div class="CellNames">
+            <p>Monday 13.00 - 14.00</a></p>
+        </div>
+        <div class="CellNames">
+            <p>TUT 0003</p>
+        </div>
+        <div class="CellNames">
+            <p>Tuesday: 14.00 - 15.00</p>
+            <p>Friday: 14.00 - 15.00</p>
+        </div>
+        <div class="CellNames">
+            <p>vidya.anada@mail.utoronto.ca</p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>Sakina Shabbir(TA)</p>
+        </div>
+        <div class="CellNames">
+            <p>Tuesday: 14.00 - 15.00</a></p>
+  
+        </div>
+        <div class="CellNames">
+            <p>TUT 0005</p>
+        </div>
+        <div class="CellNames">
+            <p>Wednesday: 14.00 - 15.00</p>
+            <p>Friday: 14.00 - 15.00</p>
+        </div>
+        <div class="CellNames">
+            <p>sakina.shabbir@mail.utoronto.ca</p>
+        </div>
+    </div>
+    <div class="Rows">
+        <div class="CellNames">
+            <p>Kevin Zhang(TA)</p>
+        </div>
+        <div class="CellNames">
+            <p>Thursday: 16.00 - 17.00</a></p>
+
+        </div>
+        <div class="CellNames">
+            <p>TUT 0006</p>
+        </div>
+        <div class="CellNames">
+            <p>Monday: 14.00 - 15.00</p>
+        </div>
+        <div class="CellNames">
+            <p>kevin.Zhang@mail.utoronto.ca</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+        <p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+        <p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+    </div>
+</body>
+</html>

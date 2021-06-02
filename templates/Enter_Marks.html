@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='enter_marks.css') }}">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<h1>Welcome to the Mark Insertion Page for CSCB20</h1>
+	</header>
+    <nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+
+
+	</nav>
+		<article>
+            <h2> Note: To enter/change a mark for a student, please enter the student's username, select the evaluation type which you
+            wish to change and enter the mark.</h2>
+		<div class = "feilds">
+		<form action="/view-mark" method="POST">
+            <input class = "input-box" type="text" name = "s_id" placeholder="Enter Student ID">
+            <label> Which evaluation type do you want to change</label>
+            <select class = "input box" id = "options" name = "options">
+                <option value = "Assignment 1">Assignment 1</option>
+                <option value="Assignment 2">Assignment 2</option>
+                <option value="Assignment 3">Assignment 3</option>
+                 <option value="Term Test 1">Term Test 1</option>
+                <option value="Term Test 2">Term Test 2</option>
+                <option value="Lab 1">Lab 1</option>
+                <option value="Lab 2">Lab 2</option>
+                <option value="Lab 3">Lab 3</option>
+                <option value="Lab 4">Lab 4</option>
+                <option value="Lab 5">Lab 5</option>
+                <option value="Lab 6">Lab 6</option>
+                <option value="Lab 7">Lab 7</option>
+                <option value="Lab 8">Lab 8</option>
+                <option value="Lab 9">Lab 9</option>
+                <option value="Lab 10">Lab 10</option>
+                <option value="Final Exam">Final Exam</option>
+            </select>
+            <input class = "input-box" type="text" name = "mark" placeholder="Enter Mark">
+            <br>
+			<input class = "submit-button" type="submit" name="new-submit">
+
+
+		</form>
+	</div>
+	</article>
+
+	<div class="footer">
+		<p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+		<p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+	</div>
+</body>
+</html>

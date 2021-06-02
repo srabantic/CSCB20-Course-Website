@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+</head>
+<body>
+<form action="/login" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>Login Here</h1>
+</div>
+<div class="login-form">
+<div class="control-group">
+                <p>Username</p>
+                <input type="text" class="login-field" value="" placeholder="Enter Username(Uoft Email)" name="username">
+<label class="login-field-icon fui-user" for="login-name"></label></div>
+<div class="control-group">
+                <p>Password</p>
+                <input type="password" class="login-field" value="" placeholder="Enter Password" name="password">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<input class="btn btn-primary btn-large btn-block" type="submit" value="LOGIN">
+</div>
+</div>
+</div>
+</form>
+{% if error %}
+ <p>{{ error }}</p>
+{% endif %}
+<form action="/new_account">
+        <div class="control-group">
+            <input class = "submit-button" type="submit" value="create new account">
+</div>
+</form>
+</body>
+</html>

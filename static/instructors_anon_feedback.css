@@ -1,0 +1,108 @@
+* {
+    font-family: Century Gothic;
+    margin: 0;
+    padding:0;
+}
+
+body {
+
+      background-image: url("b20pic.jpg");
+
+}
+
+header{
+	margin-bottom: 10px;
+}
+
+h1{
+	text-align: center;
+	margin-left: 60px;
+}
+label{
+    margin-left: 260px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: larger;
+    font-weight: bold;
+
+}
+nav{
+	list-style-type: none;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+
+nav li{
+    font-size: larger;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top:50%
+}
+
+input{
+    font-size: larger;
+    background-color:white
+}
+
+nav li.active a{
+  background-color: green;
+  color: white;
+}
+
+nav li a:hover{
+    background-color: green;
+    color: white;
+}
+.content{
+	text-align: center;
+	margin-left: 5px;
+	margin-top: 35px;
+	margin-right: 5px;
+}
+
+.content h2{
+	margin-bottom: 10px;
+	text-align: left;
+	margin-left: 100px;
+}
+
+.content article{
+	width: 600px;
+	text-align: left;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+
+.content article div.MyTable{
+	display: table;
+    margin-left: 150px;
+}
+
+.content article div.MyTable .MyTable-Tr{
+	display: table-row;
+}
+
+.content article div.MyTable .MyTable-Tr .MyTable-Td{
+	display: table-cell;
+	padding: 15px;
+	border-bottom: 5px double black;
+	border-top: 5px double black;
+	border-left: 5px double black;
+	border-right: 5px double black;
+}
+
+.content article div.MyTable .title{
+	font-weight: bold;
+
+}
+
+.footer {
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+   margin-left: 200px;
+}

@@ -1,0 +1,92 @@
+ * {
+    font-family: Century Gothic;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+      background-image: url("b20pic.jpg");
+
+}
+        input{
+  font-size: 14px;
+}
+nav{
+	list-style-type: none;
+	margin-left: 100px;
+	margin-top: 50px;
+
+}
+
+nav li{
+    font-size: larger;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top:50%
+}
+
+input{
+    font-size: larger;
+    background-color:white
+}
+
+nav li.active a{
+  background-color: green;
+  color: white;
+}
+
+nav li a:hover{
+    background-color: green;
+    color: white;
+}
+
+.input-box{
+  margin-bottom: 2em;
+    margin-top: 2em;
+  width: 450px;
+  padding: 5px;
+}
+.submit-button{
+  font-weight: bold;
+    font-size: larger;
+    margin-left: 200px;
+}
+h1{
+  margin-bottom: 1em;
+  font-weight: bold;
+  margin-left: 330px;
+}
+label{
+font-size: larger;
+    font-weight: bold;
+}
+.feilds{
+  position: fixed;
+  top: 40%;
+  background-color: lightgrey;
+  padding: 15px;
+  margin: 1em 0 1em 0;
+  max-width: 500px;
+    margin-left: 350px;
+    margin-top: -40px;
+}
+option{
+    font-size: larger;
+    font-weight: bold;
+}
+h2{
+    font-size: 15px;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: black;
+   text-align: center;
+}

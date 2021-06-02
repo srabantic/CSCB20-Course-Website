@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='AssignmentsPage.css') }}">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class = "header">
+        <h1 ><b>CSCB20-Assignments</b></h1>
+    </div>
+    <nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+        {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+    <div class="content">
+        <h2><u>Overview</u> </h2>
+        <article> Here are the assignments and exercise topics, weights, and due dates. I will be posting the exercise and assignment handouts here.All exercises and assignments will be submitted on <a href="https://markus.utsc.utoronto.ca/cscb20w20/?locale=en">MarkUs</a>
+        </article>
+        <h2><u> Assignments</u> </h2>
+</div>
+	<div class="Assignments">
+
+	<div class = "Heading">
+
+		<div class = "CellNames">
+			<p> </p>
+		</div>
+		<div class = "CellNames">
+			<p> Excercise </p>
+		</div>
+		<div class = "CellNames">
+			<p> Topic(tentative)</p>
+		</div>
+		<div class = "CellNames">
+			<p> Weight </p>
+		</div>
+		<div class = "CellNames">
+			<p> Due Date </p>
+		</div>
+		<div class = "CellNames">
+			<p> Solution </p>
+		</div>
+	</div>
+	<div class="Rows">
+        <div class="CellNames">
+            <p>1</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="SAMPLECSCB20.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p>Relational Algebra and MySQL</p>
+        </div>
+        <div class="CellNames">
+            <p>15%</p>
+        </div>
+        <div class="CellNames">
+            <p>Part 1: Wednesday Feb. 1, 11.59pm, Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20/?locale=en">MarkUs</a></p>
+            <p>Part 2 and 3: (For 5% bonus) Saturday Feb. 11, 11.59pm or Friday Feb. 17, 11.59 Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20/?locale=en">MarkUs</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="SAMPLECSCB20.pdf">Solution1</a></p>
+        </div>
+    </div>
+
+	<div class="Rows">
+        <div class="CellNames">
+            <p>2</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="SAMPLECSCB20.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p>HTML, CSS, PHP</p>
+        </div>
+        <div class="CellNames">
+            <p>15%</p>
+        </div>
+        <div class="CellNames">
+            <p>Part 1: Worth 50% Friday March. 10, 11.59pm, Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20/?locale=en">MarkUs</a></p>
+            <p>Part 2: Worth 50% Friday March. 19, 11.59pm, Submit to  <a href="https://markus.utsc.utoronto.ca/cscb20w20/?locale=en">MarkUs</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="SAMPLECSCB20.pdf">Solution2</a></p>
+        </div>
+    </div>
+
+    <div class="Rows">
+        <div class="CellNames">
+            <p>3</p>
+        </div>
+        <div class="CellNames">
+            <p><a href="SAMPLECSCB20.pdf">Handout</a></p>
+        </div>
+        <div class="CellNames">
+            <p>Web Application and Database</p>
+        </div>
+        <div class="CellNames">
+            <p>15%</p>
+        </div>
+        <div class="CellNames">
+            <p>Friday March 31, 11.59pm Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20/?locale=en">MarkUs</a></p>
+        </div>
+        <div class="CellNames">
+            <p><a href="SAMPLECSCB20.pdf">Solution3</a></p>
+        </div>
+    </div>
+</div>
+<div class="content">
+        <h2><u>FAQ-Assignment 1</u> </h2>
+        <article> Q. If the mysql portion asks for a director or actor without specifying which attributes, what should I return?
+        </article>
+        <article>A. Return the first name, last name.</article>
+
+</div>
+
+<div class="footer">
+        <p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+        <p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+    </div>
+</body>
+</html>

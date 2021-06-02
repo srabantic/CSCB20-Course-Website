@@ -1,0 +1,183 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='Lectures.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<h1>CSCB20-Lectures</h1>
+	</header>
+	<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+        {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+	<div class="content">
+		<h2><u> Lecture Schedule</u></h2>
+		<article>Please print these worksheets and lecture notes and bring them to class.
+		We will work on them during class time and worksheets will be taken up during
+		tutorials.</article>
+        <h2><u> Lecture Material</u></h2>
+		<article>
+		<div class="MyTable">
+		<div class="MyTable-Tr title">
+		<div class="MyTable-Td">Week</div>
+		<div class="MyTable-Td">Topic</div>
+		<div class="MyTable-Td">Reading</div>
+		<div class="MyTable-Td">Lecture Material</div>
+		<div class="MyTable-Td">In Class</div>
+		</div>
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">1</div>
+		<div class="MyTable-Td">Introduction, Databases background</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a></p>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">3</div>
+		<div class="MyTable-Td">Schema Diagrams, Relational Algebra</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">4</div>
+		<div class="MyTable-Td">SQL and MySQL</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td">
+		<a href= "SQL.pdf">In Class MySQL</a>
+		</div>
+		</div>
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">5</div>
+		<div class="MyTable-Td">MySQL Queries, Creating and Editing Tables</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td">
+		<a href= "SQL.pdf">In Class MySQL</a>
+		</div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">6</div>
+		<div class="MyTable-Td">MySQL Outer Joins, Views, NULL, string functions, HTML</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">7</div>
+		<div class="MyTable-Td">HTML, CSS</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+	    </div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">8</div>
+		<div class="MyTable-Td">PHP</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">9</div>
+		<div class="MyTable-Td">PHP and SQL</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">10</div>
+		<div class="MyTable-Td">JavaScript and jQuery</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">11</div>
+		<div class="MyTable-Td">jQuery, AJAX, JSON</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Lecture Handouts</a>
+		<a href= "Worksheet.pdf">Worksheets</a>
+		<a href= "Worksheet_Solutions.pdf">Worksheet Solutions</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>	
+		<div class="MyTable-Tr">
+		<div class="MyTable-Td">12</div>
+		<div class="MyTable-Td">Last Year's final</div>
+		<div class="MyTable-Td"></div>
+		<div class="MyTable-Td">
+		<a href= "Lecture_Notes.pdf">Final 2016</a>
+		</div>
+		<div class="MyTable-Td"></div>
+		</div>		
+		</div>
+	    </article>
+	</div>
+	<div class="footer">
+		<p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+		<p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+	</div>
+</body>
+</html>
+ 

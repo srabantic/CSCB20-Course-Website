@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<h1>CSCB20-Introduction to Databases and Web Applications</h1>
+	</header>
+	<nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+       {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+	</nav>
+	<div class="content">
+		<h2><u> Course description</u></h2>
+		<article>A practical introduction to databases and Web app development. Databases: terminology and applications;
+		creating, querying and updating databases; the entity-relationship model for database design. Web documents
+		and applications: static and interactive documents; Web servers and dynamic server-generated content;
+		Web application development and interface with databases.
+		<p><strong> Prerequisites:</strong> Some experience with some imperative language such as Python, Java, or C</p>
+		<strong><p> Exclusions:</strong> This course is not to be taken after or concurrently with any C- or D-level CSC courses.</p>
+		<strong><p> Syllabus:</strong><a href= "Syllabus.pdf">PDF</a></p>
+		</article>
+		<h2><u> Course Instructor </u></h2>
+		<article>
+		<p><strong>Dr.Anna Bretscher</strong></p>
+		<p><strong>Email:</strong><a href= "">bretscher@utsc.utoronto.ca</a></p>
+		<p><strong>Office:</strong> IC493</p>
+		<p><strong>Phone:</strong><a href= "">(416)208-4745</a></p>
+		<p><strong>Lectures:</strong> Mondays (9:15-11) in HW216</p>
+		<p><strong>Office Hours:</strong> Wednesday - 11:00-12:00</p>
+		<img src="img_instructor.jpg" alt="Instructor" height="100" width="100" align="left">
+	    </article>
+	</div>
+	<div class="footer">
+		<p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+		<p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+	</div>
+
+</body>
+</html>

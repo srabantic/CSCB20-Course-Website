@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> </title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='ResourcesPage.css') }}">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class = "header">
+        <h1 ><b>  CSCB20-Resources</b></h1>
+    </div>
+    <nav>
+		<li><form action="/homePage"><input type="submit" value="Home"></form></li>
+		<li><form action="/calenderPage"><input type="submit" value="Calendar"></form></li>
+		<li><form action="/new-newsPage"><input type="submit" value="New News"></form></li>
+		<li><form action="/lecturesPage"><input type="submit" value="Lectures"></form></li>
+		<li><form action="/labsPage"><input type="submit" value="Labs"></form></li>
+		<li><form action="/assignmentsPage"><input type="submit" value="Assignments"></form></li>
+		<li><form action="/testsPage"><input type="submit" value="Tests"></form></li>
+		<li><form action="/courseteamPage"><input type="submit" value="Course Team"></form></li>
+		<li><form action="/resourcesPage"><input type="submit" value="Resources"></form></li>
+		 {% if user %}
+		<li><form action="/view-marks-instructor"><input type="submit" value="View Student Marks"></form></li>
+		<li><form action="/instructor-feedback"><input type="submit" value="Anonymous Feedbacks"></form></li>
+		<li><form action="/enter-marks"><input type="submit" value="Enter Marks"></form></li>
+        <li><form action="/show-remark-reqs"><input type="submit" value="Remark Requests"></form></li>
+			<!-- Enter the buttons that are visible for only  instructors here-->
+		{% else %}
+		<!-- buttons only visible to students -->
+		<li><form action="/discussion-boardPage"><input type="submit" value="Discussion Board"></form></li>
+		<li><form action="/remark-request"><input type="submit" value="Remark Request"></form></li>
+		<li><form action="/view-student-mark"><input type="submit" value="View Course Mark"></form></li>
+        <li><form action="/send-remark-reqs"><input type="submit" value="Send Remark Requests"></form></li>
+		{% endif %}
+
+	</nav>
+	<div id="header1">
+		<h2><u><b>Online Resources</b></u></h2>
+	</div>
+	<div id="para1">
+	<ul>
+		<li><a href="index.html">Course Website</a></li>
+	</ul>
+</div>
+<div id="para2">
+	<p>Course information, lecture notes, tutorial material, important announcements, etc. will be posted on the course website. It is your responsibility to visit it frequently.</p>
+</div>
+<div id="para3">
+	<ul>
+		<li><u>MySQL Site</u></li>
+	</ul>
+</div>
+<div id="para4">
+	<p>Beginner Tutorial for <a href="https://code.tutsplus.com/articles/sql-for-beginners--net-8200">MySQL</a></p>
+</div>
+<div id="para5">
+	<ul>
+		<li><u>Email</u></li>
+	</ul>
+</div>
+<div id="para6">
+	<p>Questions regarding the course material, assignments, midterm, etc. should be posed on the bulletin board. Questions about the assignment which you feel you cannot formulate without revealing your solution (should be very rare!), as well as questions and concerns regarding your personal matters should be directed to the instructor.</p>
+</div>
+<div id="para7">
+	<ul>
+		<li><a href="https://piazza.com">Discussion Board</a></li>
+	</ul>
+</div>
+<div id="para8">
+	<p>You are encouraged to use the bulletin board to discuss the course material, pose questions on the assignments, etc. The bulletin board will be monitored by the instructor and by your TAs. Please, be very careful not to reveal (parts of) your solution on the bulletin board.</p>
+</div>
+<div id="header2">
+		<h2><u><b>Software and documentation</b></u></h2>
+	</div>
+	<div id="para9">
+	<ul>
+		<li><u>Logging into Mathlab</u></li>
+	</ul>
+</div>
+<div id="para10">
+	<ol>
+		<li>Mac OS comes with the application "terminal". Simple click on it to run. </li>
+		<p>Login to mathlab by typing ssh utorid@mathlab.utsc.utoronto.ca and enter your password</p>
+		<li>For Windows, you will need a SSH client. <a href="https://www.putty.org">PuTTY </a>is a good free one. You can download and install here: PuTTY.</li>
+		<p> Use the same command as above to login to mathlab: ssh utorid@mathlab.utsc.utoronto.ca.</p>
+
+	</ol>
+</div>
+<div class="footer">
+        <p><a href= "https://www.utsc.utoronto.ca/cms/faculty-of-computer-science"> UTSC Computer Science Faculty Members</a></p>
+        <p>Site Designed by Sharon Alex and Srabanti Chakraborty</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='new_user.css') }}">
+
+	<title></title>
+</head>
+<body>
+	<div class = "box">
+		<h3>Create New Account</h3>
+		<form action="/create-account" method="POST">
+			<input class = "input-box" type="text" name = "firstName" placeholder="First name">
+			<input class = "input-box" type="text" name = "lastName" placeholder="Last name">
+			<input class = "input-box" type="text" name = "id" placeholder="UofT Email">
+			<input class = "input-box" type="text" name = "password" placeholder="Password:Must be at least 8 characters">
+            <label> Type of User</label>
+			<br>
+            <select class = "input-box" id = "options" name = "options">
+                <option value = "Instructor">Instructor</option>
+                <option value = "Student">Student</option>
+            </select>
+            <input class = "submit-button" type="submit" name="new-submit">
+		</form>
+        <h1> Note: UofT email is the username for both students and instructors</h1>
+	</div>
+</body>
+</html>
